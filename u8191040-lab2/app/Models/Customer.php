@@ -19,5 +19,11 @@ class Customer extends Model
 
     protected $fillable = ['name', 'lastname', 'phone', 'email'];
 
-    const CREATED_AT = 'registration_date';
+    protected $casts = [
+        'created_at' => 'registration_date',
+    ];
+    public function addresses()
+    {
+        return $this->hasMany('Address');
+    }
 }

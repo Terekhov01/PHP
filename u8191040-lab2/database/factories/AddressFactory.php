@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use App\Models\Address;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Address>
@@ -32,6 +33,7 @@ class AddressFactory extends Factory
             'floor'=>random_int(1,15),
             'flat'=>random_int(1,5),
             'intercom'=>'V'.random_int(0,9).random_int(0,9).random_int(0,9).random_int(0,9),
+            'addition_date'=>date(DATE_RFC822),
         ];
     }
 }

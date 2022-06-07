@@ -25,9 +25,11 @@ class CustomerFactory extends Factory
     {
         return [
             'name'=>$this->faker->name(),
+            'blocked'=>random_int(0,1) > 0.5,
             'lastname'=>$this->faker->lastName(),
             'phone'=>$this->faker->phoneNumber(),
             'email'=>$this->faker->email(),
+            'registration_date'=>date(DATE_RFC822),
         ];
     }
 }

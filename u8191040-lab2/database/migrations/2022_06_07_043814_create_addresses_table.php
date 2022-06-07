@@ -24,6 +24,13 @@ return new class extends Migration
             $table->string('intercom');
             $table->date('addition_date');
         });
+        Schema::table('addressess', function (Blueprint $table) {
+            $table->foreignId('customer_id')
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+        });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
