@@ -1,4 +1,4 @@
 /.vscode
 /vendore
-composer.json
-composer.lock
+/composer.json
+/composer.lock
